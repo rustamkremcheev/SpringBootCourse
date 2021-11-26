@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context path="/grki" docbase="webapps/grki/">
+
+
+    <Resource name="jdbc/myoracle"
+              auth="Container"
+              factory="org.apache.tomcat.jdbc.pool.DataSourceFactory"
+              type="javax.sql.DataSource"
+              driverClassName="oracle.jdbc.OracleDriver"
+              url="jdbc:oracle:thin:@128.10.10.209:1521:agro"
+              username="bank394" password="bank394" maxActive="18" maxIdle="4" minIdle="1"
+              initSQL="ALTER SESSION SET CURRENT_SCHEMA=bank394"
+              defaultAutoCommit="false" alternateUsernameAllowed="true"
+              maxWait="-1" removeAbandoned="true" removeAbandonedTimeout="60"/>
+
+
+    <!--
+
+<Resource name="jdbc/myoracle"
+             auth="Container"
+             factory="org.apache.tomcat.jdbc.pool.DataSourceFactory"
+             type="javax.sql.DataSource"
+             driverClassName="oracle.jdbc.OracleDriver"
+             url="jdbc:oracle:thin:@(DESCRIPTION =(ADDRESS = (PROTOCOL = TCP)(HOST = 172.16.10.1)(PORT = 1521))(CONNECT_DATA =(SERVER = DEDICATED)(SERVICE_NAME = UBOY)))"
+             username="u004_munis" password="qazwsx123" maxActive="1000" maxIdle="10" minIdle="1"
+             initSQL="ALTER SESSION SET CURRENT_SCHEMA=bank394"
+             defaultAutoCommit="false" alternateUsernameAllowed="true"
+             maxWait="-1" removeAbandoned="true" removeAbandonedTimeout="60"
+         validationQuery="select 1 from dual"
+             testWhileIdle="true"/>
+ -->
+
+</Context>
